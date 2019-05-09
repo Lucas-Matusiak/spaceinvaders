@@ -53,15 +53,6 @@ public class SpaceInvadersTest {
 		public void test_unNouveauVaisseauEstPositionneHorsEspaceJeuTropEnBas_UneExceptionEstLevee() throws Exception {
 			spaceinvaders.positionnerUnNouveauVaisseau(new Dimension(1,1),new Position(14,10));
 		}
-	  /*@Test(expected = HorsEspaceJeuException.class)
-	  public void test_unNouveauVaisseauEstPositionneHorsEspaceJeuTropAGauche_UneExceptionEstLevee() throw Exception{
-		   SpaceInvaders spaceinvaders = new SpaceInvaders(15,10);
-		   spaceinvaders.positionnerUnNouveauVaisseau(14,10);
-		}
-	  }
-	  @Test(expected = HorsEspaceJeuException.class)
-	  public void test_unNouveauVaisseauEstPositionneHorsEspaceJeuTropEnHaut_UneExceptionEstLevee{}
-	  */
 	  @Test
 		public void test_UnNouveauVaisseauPositionneHorsEspaceJeu_DoitLeverUneException() {
 			
