@@ -1,4 +1,4 @@
-package fr.unilim.iut.spaceinvaders.domain;
+package fr.unilim.iut.spaceinvaders.model;
 
 public abstract class Sprite {
 
@@ -66,5 +66,5 @@ public abstract class Sprite {
 	public int hauteur() {
 		return this.dimension.hauteur;
 	}
-
+	
 }

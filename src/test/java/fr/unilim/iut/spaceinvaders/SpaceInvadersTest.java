@@ -9,9 +9,9 @@ import org.junit.Test;
 import fr.unililm.iut.spaceinvaders.utils.DebordementEspaceJeuException;
 import fr.unililm.iut.spaceinvaders.utils.HorsEspaceJeuException;
 import fr.unililm.iut.spaceinvaders.utils.MissileException;
-import fr.unilim.iut.spaceinvaders.domain.Dimension;
-import fr.unilim.iut.spaceinvaders.domain.Position;
-import fr.unilim.iut.spaceinvaders.domain.SpaceInvaders;
+import fr.unilim.iut.spaceinvaders.model.Dimension;
+import fr.unilim.iut.spaceinvaders.model.Position;
+import fr.unilim.iut.spaceinvaders.model.SpaceInvaders;
 
 public class SpaceInvadersTest {
 
@@ -307,5 +307,44 @@ public class SpaceInvadersTest {
 	       "...............\n" + 
 	       ".....VVVVVVV...\n" + 
 	       ".....VVVVVVV...\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
+	       
 	  }
+	  @Test
+	  public void  test_unNouveauEnvahisseurEstCorrectementPositionneDansEspaceJeu() {
+		  
+		  SpaceInvaders spaceinvaders = new SpaceInvaders(15, 10);
+		  spaceinvaders.positionnerUnNouveauEnvahisseur(new Dimension(2,1), new Position(7,1), 1);
+		   
+	       assertEquals("" +
+	       "...............\n" + 
+	       ".......EE......\n" +
+	       "...............\n" + 
+	       "...............\n" +
+	       "...............\n" +
+	       "...............\n" + 
+	       "...............\n" +
+	       "...............\n" + 
+	       "...............\n" + 
+	       "...............\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
+		  
+	  }
+	  @Test
+		public void test_test_EnvahisseurSeD() {
+			
+		  spaceinvaders.positionnerUnNouveauEnvahisseur(new Dimension(2,1), new Position(7,1), 1);
+		  spaceinvaders.deplacerEnvahisseurVersLaDroite();
+		  spaceinvaders.deplacerEnvahisseurVersLaDroite();
+	       assertEquals("" +
+	       "...............\n" + 
+	       ".........EE....\n" +
+	       "...............\n" + 
+	       "...............\n" +
+	       "...............\n" +
+	       "...............\n" + 
+	       "...............\n" +
+	       "...............\n" + 
+	       "...............\n" + 
+	       "...............\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
+		}
+	  
  }

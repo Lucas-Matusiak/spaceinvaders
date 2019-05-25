@@ -45,19 +45,19 @@ public class Controleur implements KeyListener {
 	    public void keyPressed(KeyEvent e) {
 
 			switch (e.getKeyCode()) {
-			case KeyEvent.VK_LEFT:
+			case KeyEvent.VK_Q:
 				this.commandeEnCours.gauche = true;
 				this.commandeARetourner.gauche = true;
 				break;
-			case KeyEvent.VK_RIGHT:
+			case KeyEvent.VK_D:
 				this.commandeEnCours.droite = true;
 				this.commandeARetourner.droite = true;
 				break;
-			case KeyEvent.VK_UP:
+			case KeyEvent.VK_Z:
 				this.commandeEnCours.haut = true;
 				this.commandeARetourner.haut = true;
 				break;
-			case KeyEvent.VK_DOWN:
+			case KeyEvent.VK_S:
 				this.commandeEnCours.bas = true;
 				this.commandeARetourner.bas = true;
 				break;
@@ -72,16 +72,16 @@ public class Controleur implements KeyListener {
 	    @Override
 		public void keyReleased(KeyEvent e) {
 			switch (e.getKeyCode()) {
-			case KeyEvent.VK_LEFT:
+			case KeyEvent.VK_Q:
 				this.commandeEnCours.gauche = false;
 				break;
-			case KeyEvent.VK_RIGHT:
+			case KeyEvent.VK_D:
 				this.commandeEnCours.droite = false;
 				break;
-			case KeyEvent.VK_UP:
+			case KeyEvent.VK_Z:
 				this.commandeEnCours.haut = false;
 				break;
-			case KeyEvent.VK_DOWN:
+			case KeyEvent.VK_S:
 				this.commandeEnCours.bas = false;
 				break;
 			case KeyEvent.VK_SPACE:
