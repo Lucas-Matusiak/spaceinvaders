@@ -1,5 +1,7 @@
 package fr.unilim.iut.spaceinvaders;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,6 +17,25 @@ public class EnvahisseurTest {
     public void initialisation() {
 	    spaceinvaders = new SpaceInvaders(15, 10);
     }
+	 @Test
+	  public void  test_unNouveauEnvahisseurEstCorrectementPositionneDansEspaceJeu() {
+		  
+		  SpaceInvaders spaceinvaders = new SpaceInvaders(15, 10);
+		  spaceinvaders.positionnerUnNouveauEnvahisseur(new Dimension(2,1), new Position(7,1), 1);
+		   
+	       assertEquals("" +
+	       "...............\n" + 
+	       ".......EE......\n" +
+	       "...............\n" + 
+	       "...............\n" +
+	       "...............\n" +
+	       "...............\n" + 
+	       "...............\n" +
+	       "...............\n" + 
+	       "...............\n" + 
+	       "...............\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
+		  
+	  }
 
 	@Test
     public void test_EnvahisseurAvanceAutomatiquement_VersLaDroite() {
